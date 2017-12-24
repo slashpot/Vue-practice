@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vue Project</title>
+    <link rel="stylesheet" type="text/css" href="http://davidtkatz.com/public_css/vue.css">
+    <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div>count: {{count}}</div>
+        <button class="vue-btn" @click="increment">increment</button>
+    </div>
+</body>
+<script type="text/javascript">
+    var app = new Vue({
+        el: "#app",
+        data: {
+            count: 0
+        },
+        methods: {
+            increment() {
+                this.count++;
+            }
+        },
+        updated() {
+            console.log("count", this.count)
+        }
+    })
+</script>
+
+</html>

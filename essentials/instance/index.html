@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vue Project</title>
+    <link rel="stylesheet" type="text/css" href="http://davidtkatz.com/public_css/vue.css">
+    <script src="https://unpkg.com/vue">
+    </script>
+</head>
+
+<body>
+    <div id="app">
+        {{text}}
+    </div>
+</body>
+<script type="text/javascript">
+    var app = new Vue({
+        el: "#app",
+        data: {
+            text: "Hello World"
+        }
+
+    })
+</script>
+
+</html>

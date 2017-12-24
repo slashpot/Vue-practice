@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vue Project</title>
+    <link rel="stylesheet" type="text/css" href="http://davidtkatz.com/public_css/vue.css">
+    <script src="https://unpkg.com/vue">
+    </script>
+</head>
+
+<body>
+    <div id="app">
+        <span>User input: {{lowerText}}</span>
+        <input v-model="text" />
+    </div>
+</body>
+<script type="text/javascript">
+    let app = new Vue({
+        el: "#app",
+        data: {
+            text: ""
+        },  
+        computed: {
+            lowerText() {
+                return this.text.toLowerCase();
+            }
+        }
+    })
+</script>
+
+</html>
